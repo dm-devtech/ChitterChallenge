@@ -4,7 +4,10 @@ Twitter clone
 ##### Instructions
 - bundle install
 - set up databases as per ./db/migrations readme
-
+To post a peep
+- run the terminal command 'rackup'
+- Go to the address localhost:9292/peeps/new
+- To post a peep enter peep text and enter the time as NOW()
 
 ##### Tech used
 - Ruby
