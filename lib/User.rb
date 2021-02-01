@@ -11,7 +11,6 @@ class User
       @password = password
     end
 
-
   def self.all
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'chitter_test')

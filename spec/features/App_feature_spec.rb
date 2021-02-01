@@ -16,7 +16,7 @@ feature 'Adding a new peep' do
     visit('/peeps/new')
     fill_in('peep_text', with: "This is a peep")
     fill_in('time', with: 'NOW()')
-    click_button('Submit')
+    find('input[name="Submit"]').click
     expect(page).to have_content("This is a peep")
     expect(page).to have_content(timenow[0...16])
   end
@@ -47,7 +47,7 @@ feature 'Entering users details' do
     fill_in('password', with: "my password")
     fill_in('name', with: "my name")
     fill_in('username', with: "my username")
-    click_button('Signup')
+    find('input[name="Signup"]').click
     expect(page).to have_content("my username")
     expect(page).to have_content("my name")
   end

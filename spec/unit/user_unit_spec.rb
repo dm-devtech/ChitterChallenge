@@ -9,12 +9,13 @@ describe User do
   end
 end
 
-  describe '#create creates a new users' do
+  describe '#create a new user' do
     it 'create a new user' do
-      user = User.create(username: "my username111", name: "my name222", email: "email@email.com333", password: "my password444")
-      expect(user['username']).to eq("my username111")
-      expect(user['name']).to eq("my name222")
-      expect(user['email']).to eq("email@email.com333")
-      expect(user['password']).to eq("my password444")
+      user = User.create(username: "myusername", name: "my name222", email: "email@email.com333", password: "my password444")
+      data = PG.connect(dbname: 'chitter_test').query("SELECT * FROM all_users;")
+      expect(data.first['username']).to eq("myusername")
+      expect(data.first['name']).to eq("my name222")
+      expect(data.first['email']).to eq("email@email.com333")
+      expect(data.first['password']).to eq("my password444")
     end
   end
