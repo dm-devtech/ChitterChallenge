@@ -2,7 +2,7 @@
 Twitter clone
 
 ##### Instructions
-- Bundle install
+- run `Bundle install`
 - Set up databases as per the instructions in the ./db/migrations readme
 
 ```Getting started:
@@ -22,12 +22,12 @@ Setting up test databases:
 
 ###### To post a peep
 - run the terminal command `rackup`
-- Go to the address localhost:9292/peeps/new
+- Go to localhost:9292/peeps/new
 - To post a peep enter peep text and enter the time as `NOW()`
 
-To run tests
+###### To run tests
 - Make sure the test database is set up
-- run `rspec` in the temrinal
+- Run `rspec` in the temrinal
 
 ##### Tech used
 - Ruby
@@ -38,6 +38,7 @@ To run tests
 - Rspec
 
 ##### Test coverage
+```
 COVERAGE:  94.67% -- 71/75 lines in 3 files
 
 +----------+-----------------------------------+-------+--------+---------+
@@ -47,7 +48,8 @@ COVERAGE:  94.67% -- 71/75 lines in 3 files
 |  94.87%  | spec/features/App_feature_spec.rb | 39    | 2      | 51-52   |
 +----------+-----------------------------------+-------+--------+---------+
 1 file(s) with 100% coverage not shown
-SimpleCov failed with exit 1
+
+```
 
 ##### User stories
 ```
