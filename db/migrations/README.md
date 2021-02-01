@@ -12,10 +12,3 @@ Setting up test databases:
 3. Connect to the database using the `pqsl` command `\c chitter_test;`
 4. Run the commands in the file `02_create_chitter_table` to create the table required for testing.  
 ```
-
-To post a peep
-- install bundle
-- ensure the above mentioned databases and tables above are created on your local machine
-- run rackup
-- go to the address /peeps/new
-- post a peep (functionality for user sign up not complete)
