@@ -2,7 +2,7 @@
 Twitter clone
 
 ##### Instructions
-- run `Bundle install`
+- Run `Bundle install`
 - Set up databases as per the instructions in the ./db/migrations readme
 
 ```Getting started:
@@ -20,10 +20,16 @@ Setting up test databases:
 4. Run the commands in the file `02_create_chitter_table` to create the table required for testing.  
 ```
 
-###### To post a peep
-- run the terminal command `rackup`
+###### To Post a Peep
+- Run the terminal command `rackup`
 - Go to localhost:9292/peeps/new
 - To post a peep enter peep text and enter the time as `NOW()`
+
+###### To Signup
+- Run the terminal command `rackup`
+- Go to localhost:9292/signup
+- To sign up enter details and click Submit
+- You will then be redirected to the peeps page
 
 ###### To run tests
 - Make sure the test database is set up
