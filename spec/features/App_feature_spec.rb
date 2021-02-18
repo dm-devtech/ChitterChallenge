@@ -25,30 +25,19 @@ end
 feature 'User can sign up' do
   scenario 'A user can enter details' do
     User.create(username: "my username1", name: "name2", email: "email@email.com3", password: "my password4")
-    visit('/peeps/new')
+    visit('/signup')
     expect(page).to have_content("Enter details to sign up")
-    expect(page).to have_content("Enter Peep text (Character limit: 100)")
-  end
-end
-
-feature 'User can sign up' do
-  scenario 'A user can enter details' do
-    User.create(username: "my username1", name: "name2", email: "email@email.com3", password: "my password4")
-    visit('/peeps')
-    expect(page).to have_content("Peeps")
-    expect(page).to have_content("Time posted")
   end
 end
 
 feature 'Entering users details' do
   scenario 'A user signs up' do
-    visit('/peeps/new')
+    visit('/signup')
     fill_in('email', with: "email@email.com")
     fill_in('password', with: "my password")
     fill_in('name', with: "my name")
     fill_in('username', with: "my username")
     find('input[name="Signup"]').click
-    expect(page).to have_content("my username")
-    expect(page).to have_content("my name")
+    expect(page).to have_content("Peeps and Time posted")
   end
 end

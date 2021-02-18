@@ -28,6 +28,6 @@ class User
     else
       connection = PG.connect(dbname: 'chitter')
     end
-    connection.exec("INSERT INTO all_users (username, name, email, password) VALUES('#{username}', '#{name}', '#{email}', '#{password}');")
+    result = connection.exec("INSERT INTO all_users (username, name, email, password) VALUES('#{username}', '#{name}', '#{email}', '#{password}');")
   end
 end
