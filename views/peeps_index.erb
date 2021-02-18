@@ -3,8 +3,10 @@
  <body style="background-color:aquamarine;"
 <ul>
 <% @peeps.each do |peep| %>
-<br>Peep: <%= peep.peep_text %>
-<br> Posted time: <%= peep.time[0...16]%><br>
+<p style="font-family:arial">
+<br><b>Peep:</b> <i><%= peep.peep_text %></i>
+<br><b>Posted time:</b> <i><%= peep.time[0...16]%><br></i>
+</p>
 <% end %>
 </ul>
 <br>
