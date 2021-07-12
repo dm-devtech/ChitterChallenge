@@ -12,7 +12,7 @@ describe Peep do
 
         expect(peeps.length).to eq 2
         expect(peeps.first).to be_a Peep
-        expect(peeps.first.id).to eq data.first['id']
+        expect(peeps.first.id).to eq peepone.id
         expect(peeps.first.peep_text).to eq 'My first peep'
         expect(peeps.first.time).to eq(timenow[0...16])
       end
