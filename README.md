@@ -1,5 +1,6 @@
 #### Chitter Challenge
 Twitter clone
+[![Build Status](https://www.travis-ci.com/dm-devtech/ChitterChallenge.svg?branch=master)](https://www.travis-ci.com/dm-devtech/ChitterChallenge)
 
 ##### Instructions
 - Run `Bundle install`
