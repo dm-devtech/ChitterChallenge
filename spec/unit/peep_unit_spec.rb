@@ -7,7 +7,7 @@ describe Peep do
         connection.query('TRUNCATE all_peeps RESTART IDENTITY CASCADE;')
 
         peepone = Peep.create(peep_text: 'My first test peep', time: 'NOW')
-        #Peep.create(peep_text: 'My second peep', time: 'NOW()')
+        peeptwo = Peep.create(peep_text: 'My second peep', time: 'NOW()')
 
         peeps = Peep.all
 
@@ -22,7 +22,7 @@ describe Peep do
     describe '#create' do
       it 'creates a new peep' do
         data = PG.connect(dbname: 'chitter_test').query("SELECT * FROM all_peeps WHERE id = #{peep.id};")
-        #peep = Peep.create(peep_text: 'My second test peep', time: 'NOW()')
+        peep = Peep.create(peep_text: 'My second test peep', time: 'NOW()')
         timenow = Time.now.to_s
         expect(peep).to be_a Peep
         expect(peep.id).to eq data.first['id']
