@@ -5,6 +5,8 @@ describe Peep do
       it 'returns all peeps' do
         connection = PG.connect(dbname: 'chitter_test')
         connection.query('TRUNCATE all_peeps RESTART IDENTITY CASCADE;')
+        test = connection.query("SELECT * FROM all_peeps)
+        puts test
 
         peepone = Peep.create(peep_text: 'My first test peep', time: 'NOW')
         peeptwo = Peep.create(peep_text: 'My second peep', time: 'NOW()')
