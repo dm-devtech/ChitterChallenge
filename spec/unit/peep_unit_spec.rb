@@ -4,6 +4,7 @@ describe Peep do
     describe '#all' do
       it 'returns all peeps' do
         connection = PG.connect(dbname: 'chitter_test')
+        connection.exec("TRUNCATE all_peeps CASCADE;")
 
         peepone = Peep.create(peep_text: 'My first test peep', time: 'NOW')
         Peep.create(peep_text: 'My second peep', time: 'NOW()')
