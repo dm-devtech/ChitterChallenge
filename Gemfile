@@ -1,11 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'capybara'
 gem 'pg'
 gem 'sinatra'
 gem 'rake'
 gem 'bundler'
-gem 'simplecov'
 
 group :test do
   gem 'capybara'
