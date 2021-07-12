@@ -87,6 +87,8 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  rake
+  bundler
   pg
   rspec
   rubocop (= 0.79.0)
