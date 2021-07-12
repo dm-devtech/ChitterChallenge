@@ -3,6 +3,8 @@ language: ruby
 services:
   - postgresql
 
+deployment: true
+
 before_script:
   - psql -U postgres -c 'CREATE DATABASE chitter_test;'
   - psql -U postgres -d chitter_test -f db/migrations/01_create_chitter_table.sql
